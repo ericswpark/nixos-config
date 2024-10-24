@@ -10,6 +10,10 @@
     discord
     vscode
     obsidian
+    bitwarden
+    slack
+    telegram-desktop
+    thunderbird-bin
   ];
 
   programs.git = {
