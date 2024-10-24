@@ -5,10 +5,11 @@
   home.homeDirectory = "/home/ericswpark";
 
   home.packages = with pkgs; [
-    # TODO: just for testing, please remove
     neofetch
     hugo
     discord
+    vscode
+    obsidian
   ];
 
   programs.git = {

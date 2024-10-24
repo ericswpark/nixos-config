@@ -11,6 +11,8 @@
 
       # Add Nvidia drivers
       ../common/nvidia.nix
+
+      ../common/steam.nix
     ];
 
   # Bootloader.
