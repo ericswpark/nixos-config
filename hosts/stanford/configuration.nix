@@ -8,6 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      # Add Nvidia drivers
+      ../common/nvidia.nix
     ];
 
   # Bootloader.
@@ -16,6 +19,18 @@
 
   networking.hostName = "stanford"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  # Nvidia PRIME settings
+  hardware.nvidia.prime = {
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
+    };
+    # WARNING: specific to Zephyrus G14 (2024) model
+    # See wiki for determining correct bus ID: https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29
+    amdgpuBusId = "PCI:65:0:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
