@@ -28,7 +28,7 @@
     };
     # WARNING: specific to Zephyrus G14 (2024) model
     # See wiki for determining correct bus ID: https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29
-    amdgpuBusId = "PCI:65:0:0";
+    amdgpuBusId = "PCI:101:0:0";
     nvidiaBusId = "PCI:1:0:0";
   };
 
