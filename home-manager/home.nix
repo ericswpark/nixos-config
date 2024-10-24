@@ -14,6 +14,9 @@
     slack
     telegram-desktop
     thunderbird-bin
+    mosh
+    mpv
+    yt-dlp
   ];
 
   programs.git = {
