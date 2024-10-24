@@ -8,6 +8,7 @@
     # TODO: just for testing, please remove
     neofetch
     hugo
+    discord
   ];
 
   programs.git = {
