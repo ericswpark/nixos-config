@@ -131,6 +131,8 @@
     vim
     wget
     curl
+    nanum
+    nanum-gothic-coding
   ];
 
   # Set default editor to vim
