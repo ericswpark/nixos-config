@@ -133,6 +133,7 @@
     curl
     nanum
     nanum-gothic-coding
+    alvr
   ];
 
   # Set default editor to vim
