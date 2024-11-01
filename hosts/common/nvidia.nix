@@ -1,20 +1,14 @@
 { config, pkgs, ... }:
 {
-  # Enable OpenGL
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      libvdpau-va-gl
+      vaapiVdpau
+      nvidia-vaapi-driver
+    ];
   };
-
-  # Doesn't seem to work...?
-  #hardware.graphics = {
-  #  enable = true;
-  #  enable32Bit = true;
-  #  extraPackages = with pkgs; [
-  #    libvdpau-va-gl
-  #    vaapiVdpau
-  #    nvidia-vaapi-driver
-  #  ];
-  #};
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -32,6 +26,5 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  # Doesn't seem to be an option anymore
-  #hardware.nvidia-container.toolkit.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
 }
