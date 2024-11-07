@@ -12,9 +12,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    nixos-06cb-009a-fingerprint-sensor = {
+      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, plasma-manager, ... }: {
+  outputs = inputs@{ nixpkgs,
+                     home-manager,
+                     plasma-manager,
+                     nixos-06cb-009a-fingerprint-sensor,
+                     ...
+            }: {
     nixosConfigurations = {
       stanford = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -35,6 +44,11 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/wendy/configuration.nix
+
+          # T480 fingerprint modules
+          # https://github.com/ahbnr/nixos-06cb-009a-fingerprint-sensor
+          nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
+          nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
 
           home-manager.nixosModules.home-manager
           {

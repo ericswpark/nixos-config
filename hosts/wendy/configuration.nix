@@ -44,6 +44,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable fingerprint sensor
+  services.open-fprintd.enable = true;
+  services.python-validity.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/Indiana/Indianapolis";
 
