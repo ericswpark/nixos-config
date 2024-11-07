@@ -17,6 +17,9 @@
 
       # Add Steam
       ../common/steam.nix
+
+      # Add Syncthing
+      ../common/syncthing.nix
     ];
 
   # Bootloader.
