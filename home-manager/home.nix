@@ -19,6 +19,7 @@
     yt-dlp
     btop
     rclone
+    gnupg
   ];
 
   programs.git = {
