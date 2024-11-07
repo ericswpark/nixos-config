@@ -25,6 +25,9 @@
   # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Enable fwupd
+  services.fwupd.enable = true;
+
   networking.hostName = "wendy"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
