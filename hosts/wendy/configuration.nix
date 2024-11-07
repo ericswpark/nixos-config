@@ -20,6 +20,9 @@
 
       # Add Syncthing
       ../common/syncthing.nix
+
+      # Add GnuPG
+      ../common/gnupg.nix
     ];
 
   # Bootloader.
