@@ -9,6 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
+      # Add Intel iGPU drivers
+      ../common/intel_igpu.nix
+
       # Add Bluetooth
       ../common/bluetooth.nix
 
@@ -126,6 +129,7 @@
     curl
     nanum
     nanum-gothic-coding
+    intel-gpu-tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
