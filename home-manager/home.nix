@@ -17,6 +17,7 @@
     mosh
     mpv
     yt-dlp
+    btop
   ];
 
   programs.git = {
