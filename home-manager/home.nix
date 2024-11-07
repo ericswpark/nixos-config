@@ -18,6 +18,7 @@
     mpv
     yt-dlp
     btop
+    rclone
   ];
 
   programs.git = {
