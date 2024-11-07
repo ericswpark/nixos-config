@@ -40,4 +40,17 @@
   home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;
+
+  programs.plasma = {
+    enable = true;
+
+    workspace = {
+      lookAndFeel = "org.kde.breezedark.desktop";
+    };
+
+    configFile = {
+      # Disable recents
+      "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
+    };
+  };
 }
