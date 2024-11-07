@@ -8,6 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      # Add Bluetooth
+      ../common/bluetooth.nix
+
+      # Add Steam
+      ../common/steam.nix
     ];
 
   # Bootloader.
@@ -87,7 +93,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-      vim
       thunderbird
     ];
   };
@@ -105,8 +110,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    git
+    vim
+    wget
+    curl
+    nanum
+    nanum-gothic-coding
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
