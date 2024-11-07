@@ -21,6 +21,7 @@
     rclone
     gnupg
     pinentry-tty
+    element-desktop
   ];
 
   programs.git = {
