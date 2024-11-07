@@ -20,6 +20,7 @@
     btop
     rclone
     gnupg
+    pinentry-tty
   ];
 
   programs.git = {
