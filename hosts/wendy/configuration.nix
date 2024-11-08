@@ -136,9 +136,11 @@
     nanum
     nanum-gothic-coding
     intel-gpu-tools
-    # Used by KDE for automatic location lookups for Night Light
-    geoclue2
   ];
+
+  # Enable geoclue2 service
+  # Used by KDE to obtain location
+  services.geoclue2.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
