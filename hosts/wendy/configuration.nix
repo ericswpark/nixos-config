@@ -136,6 +136,8 @@
     nanum
     nanum-gothic-coding
     intel-gpu-tools
+    # Used by KDE for automatic location lookups for Night Light
+    kdePackages.networkmanager-qt
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
