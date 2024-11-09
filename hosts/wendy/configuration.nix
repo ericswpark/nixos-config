@@ -6,25 +6,13 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
-
-      # Add Intel iGPU drivers
       ../common/intel_igpu.nix
-
-      # Add Bluetooth
       ../common/bluetooth.nix
-
-      # Add Steam
       ../common/steam.nix
-
-      # Add Syncthing
       ../common/syncthing.nix
-
-      # Add GnuPG
       ../common/gnupg.nix
-
-      # Add Korean fonts
       ../common/korean-fonts.nix
     ];
 
