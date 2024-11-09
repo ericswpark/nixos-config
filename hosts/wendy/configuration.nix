@@ -24,6 +24,13 @@
 
   boot.initrd.luks.devices."luks-374ae1e9-2a34-4205-bdac-261ac8219db0".device = "/dev/disk/by-uuid/374ae1e9-2a34-4205-bdac-261ac8219db0";
 
+  # Enable swapfile as this machine only has 8 GB
+  # and Firefox has some sort of memory leak that balloons until OOM-killer steps in
+  swapDevices = [{
+    device = "/swapfile";
+    size = 16 * 1024; # 16GB
+  }];
+
   # Enable fwupd
   services.fwupd.enable = true;
 
