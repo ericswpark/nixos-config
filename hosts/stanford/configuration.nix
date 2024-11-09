@@ -10,7 +10,9 @@
       ./hardware-configuration.nix
       ../common/kernel-latest.nix
       ../common/nvidia.nix
+      ../common/bluetooth.nix
       ../common/steam.nix
+      ../common/korean-fonts.nix
     ];
 
   # Bootloader.
@@ -30,12 +32,6 @@
     # See wiki for determining correct bus ID: https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29
     amdgpuBusId = "PCI:101:0:0";
     nvidiaBusId = "PCI:1:0:0";
-  };
-
-  # Add Bluetooth support
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
   };
 
   # Configure network proxy if necessary
@@ -126,8 +122,6 @@
     vim
     wget
     curl
-    nanum
-    nanum-gothic-coding
     alvr
   ];
 
@@ -160,5 +154,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
