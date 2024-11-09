@@ -9,8 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../common/kernel-latest.nix
-      ../common/nvidia.nix
-      ../common/bluetooth.nix
+      ../common/hw/nvidia.nix
+      ../common/hw/bluetooth.nix
       ../common/steam.nix
       ../common/korean-fonts.nix
     ];

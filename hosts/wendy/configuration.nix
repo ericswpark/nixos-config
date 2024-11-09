@@ -9,8 +9,8 @@
     [
       ./hardware-configuration.nix
       ../common/kernel-latest.nix
-      ../common/intel_igpu.nix
-      ../common/bluetooth.nix
+      ../common/hw/intel_igpu.nix
+      ../common/hw/bluetooth.nix
       ../common/tailscale.nix
       ../common/steam.nix
       ../common/syncthing.nix
