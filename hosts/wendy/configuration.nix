@@ -23,6 +23,9 @@
 
       # Add GnuPG
       ../common/gnupg.nix
+
+      # Add Korean fonts
+      ../common/korean-fonts.nix
     ];
 
   # Bootloader.
@@ -133,8 +136,6 @@
     vim
     wget
     curl
-    nanum
-    nanum-gothic-coding
     intel-gpu-tools
   ];
 
