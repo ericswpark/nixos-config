@@ -8,19 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
-      # Add Nvidia drivers
+      ../common/kernel-latest.nix
       ../common/nvidia.nix
-
       ../common/steam.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "stanford"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

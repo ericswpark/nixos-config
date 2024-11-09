@@ -8,6 +8,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../common/kernel-latest.nix
       ../common/intel_igpu.nix
       ../common/bluetooth.nix
       ../common/tailscale.nix
@@ -22,9 +23,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-374ae1e9-2a34-4205-bdac-261ac8219db0".device = "/dev/disk/by-uuid/374ae1e9-2a34-4205-bdac-261ac8219db0";
-
-  # Use latest kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Enable fwupd
   services.fwupd.enable = true;
