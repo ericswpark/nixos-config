@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../common/intel_igpu.nix
       ../common/bluetooth.nix
+      ../common/tailscale.nix
       ../common/steam.nix
       ../common/syncthing.nix
       ../common/gnupg.nix
@@ -157,8 +158,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  # Install Tailscale
-  services.tailscale.enable = true;
-
 }
