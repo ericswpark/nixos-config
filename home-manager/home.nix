@@ -22,6 +22,7 @@
     gnupg
     pinentry-tty
     element-desktop
+    kuro
   ];
 
   programs.git = {
