@@ -23,6 +23,7 @@
     pinentry-tty
     element-desktop
     kuro
+    moonlight-qt
   ];
 
   programs.git = {
