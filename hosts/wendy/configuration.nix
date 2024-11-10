@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, nixos-06cb-009a-fingerprint-sensor, ... }:
 
 {
   imports =
@@ -167,4 +167,22 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
+
+  # Setup fingerprint with sudo
+  security.pam.services.sudo.text = ''
+    # Account management
+    account required pam_unix.so
+
+    # Authentication management
+    auth sufficient pam_unix.so    likeauth try_first_pass nullok
+    auth sufficient ${nixos-06cb-009a-fingerprint-sensor.localPackages.fprintd-clients}/lib/security/pam_fprintd.so
+    auth required pam_deny.so
+
+    # Password management
+    password sufficient pam_unix.so nullok yescrypt
+
+    # Session management
+    session required pam_env.so conffile=/etc/pam/environment readenv=0
+    session required pam_unix.so
+  '';
 }
