@@ -4,6 +4,10 @@
   home.username = "ericswpark";
   home.homeDirectory = "/home/ericswpark";
 
+  imports = [
+    ./plasma-manager
+  ];
+
   home.packages = with pkgs; [
     neofetch
     hugo
@@ -40,29 +44,4 @@
   home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;
-
-  programs.plasma = {
-    enable = true;
-
-    workspace = {
-      lookAndFeel = "org.kde.breezedark.desktop";
-    };
-
-    configFile = {
-      # Disable recents
-      "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
-
-      ###################
-      # Dolphin options #
-      ###################
-
-      # Disable remembering previous state
-      "dolphinrc"."General"."RememberOpenedTabs" = false;
-
-      # Show preview for files on remote (up to 5 MiB)
-      "kdeglobals"."PreviewSettings"."EnableRemoteFolderThumbnail" = false;
-      "kdeglobals"."PreviewSettings"."MaximumRemoteSize" = 5242880;
-
-    };
-  };
 }
