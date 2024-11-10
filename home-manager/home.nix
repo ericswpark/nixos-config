@@ -24,6 +24,7 @@
     element-desktop
     kuro
     moonlight-qt
+    jellyfin-media-player
   ];
 
   programs.git = {
