@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "nixos-06cb-009a-fingerprint-sensor": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs2311"
+        ]
+      },
+      "locked": {
+        "lastModified": 1702831324,
+        "narHash": "sha256-bpDHKBDBcuMO14FFdBCEfsW26hzu2lby6xtfoU0jKW4=",
+        "owner": "ahbnr",
+        "repo": "nixos-06cb-009a-fingerprint-sensor",
+        "rev": "58a01fe62f5a71778bffaeb9929a118b4be0d222",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ahbnr",
+        "repo": "nixos-06cb-009a-fingerprint-sensor",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1730200266,
@@ -32,6 +52,22 @@
       "original": {
         "owner": "NixOS",
         "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs2311": {
+      "locked": {
+        "lastModified": 1720535198,
+        "narHash": "sha256-zwVvxrdIzralnSbcpghA92tWu2DV2lwv89xZc8MTrbg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "205fd4226592cc83fd4c0885a3e4c9c400efabb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -62,7 +98,9 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nixos-06cb-009a-fingerprint-sensor": "nixos-06cb-009a-fingerprint-sensor",
         "nixpkgs": "nixpkgs",
+        "nixpkgs2311": "nixpkgs2311",
         "plasma-manager": "plasma-manager"
       }
     }
