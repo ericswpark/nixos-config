@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/ericswpark";
 
   imports = [
+    ./common
     ./plasma-manager
   ];
 
@@ -30,16 +31,6 @@
     moonlight-qt
     jellyfin-media-player
   ];
-
-  programs.git = {
-    enable = true;
-    userName = "Eric Park";
-    userEmail = "me@ericswpark.com";
-    extraConfig = {
-      commit.gpgsign = true;
-      user.signingKey = "D5DCDB0D";
-    };
-  };
 
   home.stateVersion = "24.05";
 
