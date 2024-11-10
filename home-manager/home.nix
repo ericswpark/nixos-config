@@ -51,6 +51,18 @@
     configFile = {
       # Disable recents
       "kactivitymanagerdrc"."Plugins"."org.kde.ActivityManager.ResourceScoringEnabled" = false;
+
+      ###################
+      # Dolphin options #
+      ###################
+
+      # Disable remembering previous state
+      "dolphinrc"."General"."RememberOpenedTabs" = false;
+
+      # Show preview for files on remote (up to 5 MiB)
+      "kdeglobals"."PreviewSettings"."EnableRemoteFolderThumbnail" = false;
+      "kdeglobals"."PreviewSettings"."MaximumRemoteSize" = 5242880;
+
     };
   };
 }
