@@ -30,6 +30,7 @@
     kuro
     moonlight-qt
     jellyfin-media-player
+    anki-bin
   ];
 
   home.stateVersion = "24.05";
