@@ -47,11 +47,6 @@
         modules = [
           ./hosts/wendy/configuration.nix
 
-          # T480 fingerprint modules
-          # https://github.com/ahbnr/nixos-06cb-009a-fingerprint-sensor
-          nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
-          nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
-
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

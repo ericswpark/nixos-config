@@ -45,8 +45,15 @@
   networking.networkmanager.enable = true;
 
   # Enable fingerprint sensor
-  services.open-fprintd.enable = true;
-  services.python-validity.enable = true;
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = nixos-06cb-009a-fingerprint-sensor.lib.libfprint-2-tod1-vfs0090-bingch {
+        calib-data-file = ./calib-data.bin;
+      };
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "America/Indiana/Indianapolis";
@@ -167,22 +174,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  # Setup fingerprint with sudo
-  security.pam.services.sudo.text = ''
-    # Account management
-    account required pam_unix.so
-
-    # Authentication management
-    auth sufficient pam_unix.so    likeauth try_first_pass nullok
-    auth sufficient ${nixos-06cb-009a-fingerprint-sensor.localPackages.fprintd-clients}/lib/security/pam_fprintd.so
-    auth required pam_deny.so
-
-    # Password management
-    password sufficient pam_unix.so nullok yescrypt
-
-    # Session management
-    session required pam_env.so conffile=/etc/pam/environment readenv=0
-    session required pam_unix.so
-  '';
 }
