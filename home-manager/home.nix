@@ -31,6 +31,7 @@
     moonlight-qt
     jellyfin-media-player
     anki-bin
+    lmms
   ];
 
   home.stateVersion = "24.05";
