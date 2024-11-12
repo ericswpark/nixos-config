@@ -32,6 +32,8 @@
     jellyfin-media-player
     anki-bin
     lmms
+    wine
+    bottles
   ];
 
   home.stateVersion = "24.05";
