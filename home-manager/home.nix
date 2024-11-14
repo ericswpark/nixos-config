@@ -34,6 +34,7 @@
     lmms
     wine
     bottles
+    texliveFull
   ];
 
   home.stateVersion = "24.05";
