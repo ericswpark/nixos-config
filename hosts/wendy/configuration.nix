@@ -16,6 +16,7 @@
       ../common/syncthing.nix
       ../common/gnupg.nix
       ../common/korean-fonts.nix
+      ../common/java.nix
     ];
 
   # Bootloader.

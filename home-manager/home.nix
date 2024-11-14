@@ -34,7 +34,6 @@
     lmms
     wine
     bottles
-    jdk
   ];
 
   home.stateVersion = "24.05";
