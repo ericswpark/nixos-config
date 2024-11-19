@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 # Requires setting up the service config in rclone beforehand
 {
     systemd.user.services.rclone-purdue-mount = {
@@ -11,7 +11,7 @@
 
         Service = let
             # Directory to mount to
-            mountDir = "/home/ericswpark/OneDrive-Purdue";
+            mountDir = "${config.home.homeDirectory}/OneDrive-Purdue";
             # Name of service config in rclone
             serviceConfigName = "OneDrive-Purdue:";
         in
