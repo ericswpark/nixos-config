@@ -11,11 +11,11 @@
       ../common/kernel-latest.nix
       ../common/hw/intel_igpu.nix
       ../common/hw/bluetooth.nix
+      ../common/korean
       ../common/tailscale.nix
       ../common/steam.nix
       ../common/syncthing.nix
       ../common/gnupg.nix
-      ../common/korean-fonts.nix
       ../common/java.nix
     ];
 
