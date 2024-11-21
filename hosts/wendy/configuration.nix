@@ -143,7 +143,7 @@
     wget
     curl
     intel-gpu-tools
-    plasma5Packages.plasma-thunderbolt
+    kdePackages.plasma-thunderbolt
   ];
 
   # Enable geoclue2 service
