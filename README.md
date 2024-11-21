@@ -20,7 +20,5 @@ sudo ln -s ~/nixos-config/ /etc/nixos
 
 # Hosts
 
-- `stanford` - test machine on G14. Will be removed shortly
 - `wendy` - ThinkPad T480
 
-All of my hostnames follow a naming scheme like Debian. Guess which one!
