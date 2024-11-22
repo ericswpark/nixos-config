@@ -22,6 +22,14 @@
       "kdeglobals"."PreviewSettings"."EnableRemoteFolderThumbnail" = false;
       "kdeglobals"."PreviewSettings"."MaximumRemoteSize" = 5242880;
 
+
+      ################
+      # KATE options #
+      ################
+
+      # Disable recent files
+      "katerc"."General"."Recent File List Entry Count" = 0;
+
     };
   };
 }
