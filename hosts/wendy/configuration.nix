@@ -35,6 +35,10 @@
   # Enable fwupd
   services.fwupd.enable = true;
 
+  # Enable Thunderbolt daemon
+  # https://nixos.wiki/wiki/Thunderbolt
+  services.hardware.bolt.enable = true;
+
   networking.hostName = "wendy"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
