@@ -35,6 +35,7 @@
     wine
     bottles
     texliveFull
+    tor-browser
   ];
 
   home.stateVersion = "24.05";
