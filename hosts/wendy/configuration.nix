@@ -17,6 +17,7 @@
       ../common/syncthing.nix
       ../common/gnupg.nix
       ../common/java.nix
+      ../common/direnv.nix
     ];
 
   # Bootloader.
