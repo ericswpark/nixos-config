@@ -149,6 +149,7 @@
     curl
     intel-gpu-tools
     kdePackages.plasma-thunderbolt
+    tlp
   ];
 
   # Enable geoclue2 service
