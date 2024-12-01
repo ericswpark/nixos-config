@@ -11,6 +11,7 @@
       ../common/kernel-latest.nix
       ../common/hw/intel_igpu.nix
       ../common/hw/bluetooth.nix
+      ../common/hw/tlp.nix
       ../common/korean
       ../common/tailscale.nix
       ../common/steam.nix
@@ -149,7 +150,6 @@
     curl
     intel-gpu-tools
     kdePackages.plasma-thunderbolt
-    tlp
   ];
 
   # Enable geoclue2 service
