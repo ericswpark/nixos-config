@@ -36,6 +36,7 @@
     bottles
     texliveFull
     tor-browser
+    jetbrains-toolbox
   ];
 
   home.stateVersion = "24.05";
