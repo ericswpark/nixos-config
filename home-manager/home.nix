@@ -37,6 +37,7 @@
     texliveFull
     tor-browser
     jetbrains-toolbox
+    signal-desktop
   ];
 
   home.stateVersion = "24.05";
