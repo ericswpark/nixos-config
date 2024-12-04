@@ -40,6 +40,7 @@
     signal-desktop
     neovim
     nerdfonts
+    unzip
   ];
 
   home.stateVersion = "24.05";
