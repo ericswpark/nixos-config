@@ -39,6 +39,7 @@
     jetbrains-toolbox
     signal-desktop
     neovim
+    nerdfonts
   ];
 
   home.stateVersion = "24.05";
