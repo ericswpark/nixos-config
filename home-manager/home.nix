@@ -38,6 +38,7 @@
     tor-browser
     jetbrains-toolbox
     signal-desktop
+    neovim
   ];
 
   home.stateVersion = "24.05";
