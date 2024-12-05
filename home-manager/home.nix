@@ -41,6 +41,7 @@
     neovim
     nerdfonts
     unzip
+    python3
   ];
 
   home.stateVersion = "24.05";
