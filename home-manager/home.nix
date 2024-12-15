@@ -39,7 +39,6 @@
     jetbrains-toolbox
     signal-desktop
     neovim
-    nerdfonts
     unzip
     python3
   ];
