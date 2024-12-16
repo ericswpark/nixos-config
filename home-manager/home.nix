@@ -41,6 +41,7 @@
     neovim
     unzip
     python3
+    kdePackages.kdenlive
   ];
 
   home.stateVersion = "24.05";
