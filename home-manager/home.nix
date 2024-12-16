@@ -48,4 +48,17 @@
   home.stateVersion = "24.05";
 
   programs.home-manager.enable = true;
+
+
+  # Use my dotfiles repository
+  # git clone git@github.com:ericswpark/dot_files.git ~/.dotfiles
+  home.file = {
+    ".config/mpv" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/mpv/.config/mpv";
+    };
+
+    ".vimrc" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/vim/.vimrc";
+    };
+  };
 }
