@@ -42,6 +42,7 @@
     unzip
     python3
     kdePackages.kdenlive
+    davinci-resolve
   ];
 
   home.stateVersion = "24.05";
