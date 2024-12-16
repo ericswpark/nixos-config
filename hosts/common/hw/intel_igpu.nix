@@ -8,6 +8,7 @@
       vaapiVdpau
       intel-media-driver
       vaapiIntel
+      intel-compute-runtime
     ];
   };
 }
