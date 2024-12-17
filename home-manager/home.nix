@@ -46,6 +46,7 @@
     arduino-ide
     screen
     minicom
+    prusa-slicer
   ];
 
   home.stateVersion = "24.05";
