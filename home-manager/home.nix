@@ -44,6 +44,8 @@
     kdePackages.kdenlive
     davinci-resolve
     arduino-ide
+    screen
+    minicom
   ];
 
   home.stateVersion = "24.05";
