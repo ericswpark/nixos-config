@@ -122,7 +122,11 @@
   users.users.ericswpark = {
     isNormalUser = true;
     description = "Eric Park";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "dialout" # For Arduino serial
+    ];
     packages = with pkgs; [
       kdePackages.kate
       thunderbird

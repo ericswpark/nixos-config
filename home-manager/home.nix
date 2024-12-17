@@ -43,6 +43,7 @@
     python3
     kdePackages.kdenlive
     davinci-resolve
+    arduino-ide
   ];
 
   home.stateVersion = "24.05";
