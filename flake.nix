@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs2311.url = "github:NixOS/nixpkgs/nixos-23.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,23 +13,26 @@
       inputs.home-manager.follows = "home-manager";
     };
     nixos-06cb-009a-fingerprint-sensor = {
-      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
-      inputs.nixpkgs.follows = "nixpkgs2311";
+      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor?ref=24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ nixpkgs,
-                     home-manager,
-                     plasma-manager,
-                     nixos-06cb-009a-fingerprint-sensor,
-                     ...
+  outputs = { self,
+              nixpkgs,
+              home-manager,
+              plasma-manager,
+              nixos-06cb-009a-fingerprint-sensor,
+              ...
             }: {
     nixosConfigurations = {
       wendy = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = inputs;
         modules = [
           ./hosts/wendy/configuration.nix
+
+          # Fingerprint sensor module
+          nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
 
           home-manager.nixosModules.home-manager
           {

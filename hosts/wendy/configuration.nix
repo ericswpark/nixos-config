@@ -52,14 +52,10 @@
   networking.networkmanager.enable = true;
 
   # Enable fingerprint sensor
-  services.fprintd = {
+  services."06cb-009a-fingerprint-sensor" = {
     enable = true;
-    tod = {
-      enable = true;
-      driver = nixos-06cb-009a-fingerprint-sensor.lib.libfprint-2-tod1-vfs0090-bingch {
-        calib-data-file = ./calib-data.bin;
-      };
-    };
+    backend = "libfprint-tod";
+    calib-data-file = ./calib-data.bin;
   };
 
   # Set your time zone.
