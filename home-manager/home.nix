@@ -42,7 +42,6 @@
     unzip
     python3
     kdePackages.kdenlive
-    davinci-resolve
     arduino-ide
     screen
     minicom
