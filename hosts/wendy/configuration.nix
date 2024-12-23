@@ -19,6 +19,7 @@
       ../common/gnupg.nix
       ../common/java.nix
       ../common/direnv.nix
+      ../common/crashdump.nix
     ];
 
   # Bootloader.
