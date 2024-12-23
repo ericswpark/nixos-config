@@ -12,6 +12,13 @@ sudo mv /etc/nixos /etc/nixos.bak
 sudo ln -s ~/nixos-config/ /etc/nixos
 ```
 
+# Updates
+
+```
+nix flake update
+sudo nixos-rebuild switch
+```
+
 # Hosts
 
 - `wendy` - ThinkPad T480
