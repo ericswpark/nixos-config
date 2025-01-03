@@ -47,6 +47,7 @@
     minicom
     prusa-slicer
     android-tools
+    trayscale
   ];
 
   home.stateVersion = "24.05";
