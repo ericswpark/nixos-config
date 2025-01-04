@@ -48,6 +48,7 @@
     prusa-slicer
     android-tools
     trayscale
+    google-chrome
   ];
 
   home.stateVersion = "24.05";
