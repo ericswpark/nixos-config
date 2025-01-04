@@ -152,6 +152,8 @@
     curl
     intel-gpu-tools
     kdePackages.plasma-thunderbolt
+    exfat
+    exfatprogs
   ];
 
   # Enable geoclue2 service
