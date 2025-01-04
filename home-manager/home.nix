@@ -49,6 +49,8 @@
     android-tools
     trayscale
     google-chrome
+    kdePackages.partitionmanager
+    gparted
   ];
 
   home.stateVersion = "24.05";
