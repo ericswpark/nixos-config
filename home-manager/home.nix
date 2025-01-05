@@ -51,6 +51,7 @@
     google-chrome
     kdePackages.partitionmanager
     gparted
+    freecad
   ];
 
   home.stateVersion = "24.05";
