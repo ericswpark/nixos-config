@@ -52,6 +52,7 @@
     kdePackages.partitionmanager
     gparted
     freecad
+    gnumake
   ];
 
   home.stateVersion = "24.05";
