@@ -31,7 +31,6 @@
     moonlight-qt
     jellyfin-media-player
     anki-bin
-    lmms
     wine
     bottles
     texliveFull
