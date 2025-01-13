@@ -61,7 +61,8 @@
 
   # Set your time zone.
   # Use `timedatectl list-timezones` to get all options
-  time.timeZone = "Asia/Seoul";
+  #time.timeZone = "Asia/Seoul";
+  time.timeZone = "America/Indiana/Indianapolis";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
