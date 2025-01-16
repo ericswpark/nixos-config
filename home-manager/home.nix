@@ -52,6 +52,11 @@
     gparted
     freecad
     gnumake
+    cargo
+    rustc
+    gcc
+    rustfmt
+    clippy
   ];
 
   home.stateVersion = "24.05";
