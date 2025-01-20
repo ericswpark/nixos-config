@@ -24,4 +24,4 @@ sudo nixos-rebuild switch
 # Hosts
 
 - `wendy` - ThinkPad T480
-
+- `wendigo` - ThinkPad T480 clone test
