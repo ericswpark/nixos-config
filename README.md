@@ -24,6 +24,7 @@ sudo nixos-rebuild switch --flake ~/nixos-config/#hostnamehere
 - Generate SSH keys, add to GitHub
 - Import GPG keys
 - Consider setting up Korean input ([see below](#korean-input))
+- Setup Tailscale
 
 # Updates
 
