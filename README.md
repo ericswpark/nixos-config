@@ -9,9 +9,13 @@ If installing on a new machine or restoring:
 
 ```
 nix-shell -p git    # new system, git not available
+git clone git@github.com:ericswpark/dot_files.git ~/.dotfiles   # if using my dotfiles
 git clone git@github.com:ericswpark/nixos-config.git ~/nixos-config
 sudo mv /etc/nixos /etc/nixos.bak
 sudo ln -s ~/nixos-config/ /etc/nixos
+
+# New machines have wrong hostname set, set manually
+sudo nixos-rebuild switch --flake ~/nixos-config/#hostnamehere
 ```
 
 # Updates
