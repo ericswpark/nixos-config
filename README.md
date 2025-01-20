@@ -18,6 +18,11 @@ sudo ln -s ~/nixos-config/ /etc/nixos
 sudo nixos-rebuild switch --flake ~/nixos-config/#hostnamehere
 ```
 
+## Post-installation steps
+
+- Adjust any hardware-specific settings
+- Consider setting up Korean input ([see below](#korean-input))
+
 # Updates
 
 ```
