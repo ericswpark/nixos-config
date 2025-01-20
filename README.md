@@ -21,6 +21,19 @@ nix flake update
 sudo nixos-rebuild switch
 ```
 
+# Setup
+
+## Korean input
+
+A few more setup steps are required for Korean input after installation:
+
+- Under "System Settings > Keyboard > Virtual Keyboard", select "Fcitx 5" and click "Apply"
+- Under "System Settings > Language & Time > Input Method", add the "Hangul" input method and ensure it is under "Input Method On". Also add the "Keyboard - Korean - Korean (101/104-key compatible)" layout if you want English input (under the Korean keyboard layout). At the end it should look like this:
+
+![Plasma System Settings Input Method configuration ](images/korean-input-kde-plasma-system-settings-input-method.png)
+
+- Click "Apply" to save changes and reboot (or log out and log back in)
+
 # Hosts
 
 - `wendy` - ThinkPad T480
