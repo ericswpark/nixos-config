@@ -46,6 +46,27 @@ A few more setup steps are required for Korean input after installation:
 
 - Click "Apply" to save changes and reboot (or log out and log back in)
 
+## OneDrive mount
+
+Used for Purdue
+
+- `rclone config`
+- `n` (new config)
+- `onedrive` (storage type)
+- Press Enter twice to leave `client_id` and `client_secret` empty
+- `global` (region)
+- Press Enter to leave `tenant` empty
+- `n` for advanced config
+- `y` to authenticate with browser
+- Sign in with credentials
+- `onedrive` for `config_type`
+- `1` for `config_driveid` (there should only be one)
+- `y` to confirm drive
+- `y` to confirm remote
+- `q` to quit
+- `systemctl --user enable --now rclone-purdue-mount`
+
+
 # Hosts
 
 - `wendy` - ThinkPad T480
