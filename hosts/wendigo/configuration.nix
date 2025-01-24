@@ -12,7 +12,6 @@
       ../common/memtest.nix
       ../common/hw/intel_igpu.nix
       ../common/hw/bluetooth.nix
-      ../common/hw/printers.nix
       ../common/korean
       ../common/tailscale.nix
       ../common/steam.nix
