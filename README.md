@@ -39,12 +39,15 @@ sudo nixos-rebuild switch
 
 A few more setup steps are required for Korean input after installation:
 
-- Under "System Settings > Keyboard > Virtual Keyboard", select "Fcitx 5" and click "Apply"
+- Under "System Settings > Keyboard > Virtual Keyboard", select "Fcitx 5 Wayland Launcher (Experimental)" and click "Apply"
 - Under "System Settings > Language & Time > Input Method", add the "Hangul" input method and ensure it is under "Input Method On". Also add the "Keyboard - Korean - Korean (101/104-key compatible)" layout if you want English input (under the Korean keyboard layout). At the end it should look like this:
 
 ![Plasma System Settings Input Method configuration ](images/korean-input-kde-plasma-system-settings-input-method.png)
 
-- Click "Apply" to save changes and reboot (or log out and log back in)
+- Remove the "Left Shift" key from "Temporarily switch between first and current Input Method" under "Global Options". Otherwise the input method will switch each time you press Shift and it becomes incredibly annoying. (Why is this even the default?!)
+- Click "Apply" for all levels to save changes and reboot (or log out and log back in)
+
+If Korean input is _still_ not working, then you may need to force it to run under KWin. To do this, quit all `fcitx5` instances (right click on the tray icon and select Quit), then click on the Virtual Keyboard icon to enable the "On-Screen Keyboard". This will force KWin to launch `fcitx5`, and now your Korean input should work! (Note that despite the name "On-Screen Keyboard" it will not show a on-screen keyboard.)
 
 ## OneDrive mount
 
