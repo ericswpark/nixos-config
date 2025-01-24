@@ -9,6 +9,7 @@
     [
       ./hardware-configuration.nix
       ../common/kernel-latest.nix
+      ../common/memtest.nix
       ../common/hw/intel_igpu.nix
       ../common/hw/bluetooth.nix
       ../common/hw/printers.nix
