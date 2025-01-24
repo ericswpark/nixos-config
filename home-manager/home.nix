@@ -61,6 +61,16 @@
 
   programs.home-manager.enable = true;
 
+  home.sessionVariables.EDITOR = "nvim";
+
+  programs.bash = {
+    enable = true;
+
+    initExtra = ''
+      # include .profile if it exists
+      [[ -f ~/.profile ]] && . ~/.profile
+    '';
+  };
 
   # Use my dotfiles repository
   # git clone git@github.com:ericswpark/dot_files.git ~/.dotfiles
