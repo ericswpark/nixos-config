@@ -8,8 +8,13 @@ Holds my configuration files for my NixOS machines
 If installing on a new machine or restoring:
 
 ```
-nix-shell -p git    # new system, git not available
-git clone git@github.com:ericswpark/dot_files.git ~/.dotfiles   # if using my dotfiles
+# If on a new system, git will not be available
+# Use legacy nix shell as nix flakes is not yet enabled
+nix-shell -p git
+
+# If using my dotfiles, run:
+git clone git@github.com:ericswpark/dot_files.git ~/.dotfiles
+
 git clone git@github.com:ericswpark/nixos-config.git ~/nixos-config
 sudo mv /etc/nixos /etc/nixos.bak
 sudo ln -s ~/nixos-config/ /etc/nixos
