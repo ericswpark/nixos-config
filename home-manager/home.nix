@@ -33,7 +33,6 @@
     anki-bin
     wine
     bottles
-    texliveFull
     tor-browser
     jetbrains-toolbox
     signal-desktop
