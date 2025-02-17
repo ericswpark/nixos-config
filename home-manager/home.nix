@@ -34,7 +34,6 @@
     wine
     bottles
     tor-browser
-    jetbrains-toolbox
     signal-desktop
     neovim
     unzip
@@ -54,6 +53,9 @@
     gcc
     rustup
     jetbrains.rust-rover
+    jetbrains.idea-ultimate
+    jetbrains.pycharm-professional
+    android-studio-stable
   ];
 
   home.stateVersion = "24.05";
