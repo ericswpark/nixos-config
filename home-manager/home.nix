@@ -55,7 +55,7 @@
     jetbrains.rust-rover
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
-    android-studio-stable
+    android-studio
   ];
 
   home.stateVersion = "24.05";
