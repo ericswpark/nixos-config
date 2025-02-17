@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, nixos-06cb-009a-fingerprint-sensor, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -50,13 +50,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Enable fingerprint sensor
-  services."06cb-009a-fingerprint-sensor" = {
-    enable = true;
-    backend = "libfprint-tod";
-    calib-data-file = ./calib-data.bin;
-  };
 
   # Set your time zone.
   # Use `timedatectl list-timezones` to get all options

@@ -12,17 +12,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    nixos-06cb-009a-fingerprint-sensor = {
-      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor?ref=24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self,
               nixpkgs,
               home-manager,
               plasma-manager,
-              nixos-06cb-009a-fingerprint-sensor,
               ...
             }: {
     nixosConfigurations = {
@@ -30,10 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/wendy/configuration.nix
-
-          # Fingerprint sensor module
-          nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
-
+          
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
