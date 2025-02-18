@@ -172,6 +172,18 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Use binary cache
+  nix.settings = {
+    substituters = [
+      "https://hydra.inx.moe/?priority=10"
+      "https://cache.nixos.org/"
+    ];
+    trusted-public-keys = [
+      "infinidoge-1:uw2A6JHHdGJ9GPk0NEDnrdfVkPp0CUY3zIvwVgNlrSk="
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+    ];
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
