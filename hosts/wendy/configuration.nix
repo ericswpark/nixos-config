@@ -13,6 +13,7 @@
       ../common/hw/bluetooth.nix
       ../common/korean
       ../common/tailscale.nix
+      ../common/docker.nix
       ../common/steam.nix
       ../common/syncthing.nix
       ../common/gnupg.nix
