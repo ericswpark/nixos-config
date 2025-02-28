@@ -22,7 +22,7 @@
                     "/run/current-system/sw/bin/mkdir -p ${mountDir}"
                 ];
                 ExecStart = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode full ${serviceConfigName} ${mountDir}";
-                ExecStop = "/run/current-system/sw/bin/fusermount -u ${mountDir}";
+                ExecStop = "/run/current-system/sw/bin/fusermount -uz ${mountDir}";
                 Restart = "on-failure";
                 RestartSec = "10s";
                 Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
