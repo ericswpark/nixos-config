@@ -8,6 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../common/kernel-latest.nix
+      ../common/tailscale.nix
+      ../common/syncthing.nix
     ];
 
   # Use the GRUB 2 boot loader.
