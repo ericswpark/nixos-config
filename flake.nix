@@ -34,8 +34,8 @@
 
             home-manager.users.ericswpark = import ./home-manager/home.nix;
           }
-        ];
-      };
-    };
-  };
+        ]; # End of modules
+      }; # End of wendy config
+    }; # End of NixOS configurations
+  }; # End of outputs
 }
