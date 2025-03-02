@@ -32,7 +32,7 @@
             home-manager.useUserPackages = true;
             home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
 
-            home-manager.users.ericswpark = import ./home-manager/home.nix;
+            home-manager.users.ericswpark = import ./hosts/wendy/home-manager.nix;
           }
         ]; # End of modules
       }; # End of wendy config

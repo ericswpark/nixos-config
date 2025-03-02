@@ -5,8 +5,8 @@
   home.homeDirectory = "/home/ericswpark";
 
   imports = [
-    ./common
-    ./plasma-manager
+    ../../home-manager/common
+    ../../home-manager/plasma-manager
   ];
 
   home.packages = with pkgs; [
