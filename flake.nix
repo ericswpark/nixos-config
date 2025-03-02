@@ -36,6 +36,12 @@
           }
         ]; # End of modules
       }; # End of wendy config
+      dipclone = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/dipclone/configuration.nix
+        ]; # End of modules
+      }; # End of dipclone config
     }; # End of NixOS configurations
   }; # End of outputs
 }
