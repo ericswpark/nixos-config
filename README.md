@@ -73,9 +73,3 @@ Used for Purdue
 - `y` to confirm remote
 - `q` to quit
 - `systemctl --user enable --now rclone-purdue-mount`
-
-
-# Hosts
-
-- `wendy` - ThinkPad T480
-- `wendigo` - ThinkPad T480 clone test
