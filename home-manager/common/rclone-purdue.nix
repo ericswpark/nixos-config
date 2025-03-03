@@ -19,7 +19,6 @@
                 Type = "simple";
                 ExecStartPre = [
                     "/run/current-system/sw/bin/nm-online -q"
-                    "/run/current-system/sw/bin/fusermount -u ${mountDir} || true" # If mounted previously, try clean unmount
                     "/run/current-system/sw/bin/mkdir -p ${mountDir}"
                 ];
                 ExecStart = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode full ${serviceConfigName} ${mountDir}";
