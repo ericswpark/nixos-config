@@ -55,6 +55,7 @@
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
     android-studio
+    virtualbox
   ];
 
   home.stateVersion = "24.05";
