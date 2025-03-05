@@ -11,7 +11,6 @@
 
   home.packages = with pkgs; [
     neofetch
-    hugo
     discord
     vscode
     obsidian
