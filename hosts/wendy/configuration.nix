@@ -20,6 +20,7 @@
       ../common/java.nix
       ../common/direnv.nix
       ../common/crashdump.nix
+      ../common/virtualbox.nix
     ];
 
   # Bootloader.
