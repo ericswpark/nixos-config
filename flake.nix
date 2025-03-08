@@ -43,6 +43,14 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/dipproxy/configuration.nix
+
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.ericswpark = import ./hosts/dipproxy/home-manager.nix;
+            }
           ]; # End of modules
         }; # End of dipproxy config
       }; # End of NixOS configurations
