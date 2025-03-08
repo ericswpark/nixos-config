@@ -55,6 +55,8 @@
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
     android-studio
+    nixfmt-rfc-style
+    nil
   ];
 
   home.stateVersion = "24.05";
