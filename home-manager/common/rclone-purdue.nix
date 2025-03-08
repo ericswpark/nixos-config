@@ -24,6 +24,8 @@
                 ExecStart = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode full --timeout 10s --contimeout 10s ${serviceConfigName} ${mountDir}";
                 ExecStop = "/run/current-system/sw/bin/fusermount -uz ${mountDir}";
                 Restart = "on-failure";
+                RestartSec = "5s";
+                RestartSteps = "1";
                 Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
             };
     };
