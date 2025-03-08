@@ -1,4 +1,4 @@
 { ... }:
 {
-    boot.crashDump.enable = true;
+  boot.crashDump.enable = true;
 }

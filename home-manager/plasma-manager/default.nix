@@ -22,7 +22,6 @@
       "kdeglobals"."PreviewSettings"."EnableRemoteFolderThumbnail" = false;
       "kdeglobals"."PreviewSettings"."MaximumRemoteSize" = 5242880;
 
-
       ################
       # KATE options #
       ################

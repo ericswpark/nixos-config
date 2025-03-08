@@ -14,34 +14,37 @@
     };
   };
 
-  outputs = { self,
-              nixpkgs,
-              home-manager,
-              plasma-manager,
-              ...
-            }: {
-    nixosConfigurations = {
-      wendy = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/wendy/configuration.nix
-          
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      plasma-manager,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        wendy = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/wendy/configuration.nix
 
-            home-manager.users.ericswpark = import ./hosts/wendy/home-manager.nix;
-          }
-        ]; # End of modules
-      }; # End of wendy config
-      dipproxy = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/dipproxy/configuration.nix
-        ]; # End of modules
-      }; # End of dipproxy config
-    }; # End of NixOS configurations
-  }; # End of outputs
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+
+              home-manager.users.ericswpark = import ./hosts/wendy/home-manager.nix;
+            }
+          ]; # End of modules
+        }; # End of wendy config
+        dipproxy = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/dipproxy/configuration.nix
+          ]; # End of modules
+        }; # End of dipproxy config
+      }; # End of NixOS configurations
+    }; # End of outputs
 }

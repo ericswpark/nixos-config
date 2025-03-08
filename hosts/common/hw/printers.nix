@@ -1,17 +1,17 @@
 { pkgs, ... }:
 {
-    services.avahi = {
-        enable = true;
-        nssmdns4 = true;
-        openFirewall = true;
-    };
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
-    services.printing = {
-        enable = true;
-        drivers = with pkgs; [
-            canon-cups-ufr2
-            gutenprint
-            gutenprintBin
-        ];
-    };
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      canon-cups-ufr2
+      gutenprint
+      gutenprintBin
+    ];
+  };
 }

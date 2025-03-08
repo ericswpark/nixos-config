@@ -5,36 +5,38 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ../common/kernel-latest.nix
-      ../common/hw/intel_igpu.nix
-      ../common/hw/bluetooth.nix
-      ../common/korean
-      ../common/tailscale.nix
-      ../common/docker.nix
-      ../common/steam.nix
-      ../common/syncthing.nix
-      ../common/gnupg.nix
-      ../common/java.nix
-      ../common/direnv.nix
-      ../common/crashdump.nix
-      ../common/virtualbox.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ../common/kernel-latest.nix
+    ../common/hw/intel_igpu.nix
+    ../common/hw/bluetooth.nix
+    ../common/korean
+    ../common/tailscale.nix
+    ../common/docker.nix
+    ../common/steam.nix
+    ../common/syncthing.nix
+    ../common/gnupg.nix
+    ../common/java.nix
+    ../common/direnv.nix
+    ../common/crashdump.nix
+    ../common/virtualbox.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-374ae1e9-2a34-4205-bdac-261ac8219db0".device = "/dev/disk/by-uuid/374ae1e9-2a34-4205-bdac-261ac8219db0";
+  boot.initrd.luks.devices."luks-374ae1e9-2a34-4205-bdac-261ac8219db0".device =
+    "/dev/disk/by-uuid/374ae1e9-2a34-4205-bdac-261ac8219db0";
 
   # Enable swapfile as this machine only has 8 GB
   # and Firefox has some sort of memory leak that balloons until OOM-killer steps in
-  swapDevices = [{
-    device = "/swapfile";
-    size = 16 * 1024; # 16GB
-  }];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 16 * 1024; # 16GB
+    }
+  ];
 
   # Enable fwupd
   services.fwupd.enable = true;
@@ -136,7 +138,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

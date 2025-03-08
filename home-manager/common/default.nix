@@ -1,6 +1,6 @@
 {
-    imports = [
-        ./git.nix
-        ./rclone-purdue.nix
-    ];
+  imports = [
+    ./git.nix
+    ./rclone-purdue.nix
+  ];
 }

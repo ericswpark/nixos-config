@@ -1,7 +1,7 @@
 { ... }:
 {
-    services.tailscale = {
-        enable = true;
-        useRoutingFeatures = "both";
-    };
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "both";
+  };
 }

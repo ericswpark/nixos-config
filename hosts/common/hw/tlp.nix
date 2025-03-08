@@ -1,7 +1,7 @@
 { ... }:
 {
-    services.tlp.enable = true;
+  services.tlp.enable = true;
 
-    # Conflicts with TLP, explicitly disable
-    services.power-profiles-daemon.enable = false;
+  # Conflicts with TLP, explicitly disable
+  services.power-profiles-daemon.enable = false;
 }
