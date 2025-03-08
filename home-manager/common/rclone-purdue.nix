@@ -21,7 +21,7 @@
                     "/run/current-system/sw/bin/nm-online -q"
                     "/run/current-system/sw/bin/mkdir -p ${mountDir}"
                 ];
-                ExecStart = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode full ${serviceConfigName} ${mountDir}";
+                ExecStart = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode full --timeout 10s --contimeout 10s ${serviceConfigName} ${mountDir}";
                 ExecStop = "/run/current-system/sw/bin/fusermount -uz ${mountDir}";
                 Restart = "on-failure";
                 Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
