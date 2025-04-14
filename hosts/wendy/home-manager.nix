@@ -100,6 +100,12 @@
       
       # Source P10K config if it exists
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+      # Function for "incognito" mode
+      function incognito() {
+          unset HISTFILE
+          echo "Done! This terminal session will not be recorded into history."
+      }
     '';
   };
 }
