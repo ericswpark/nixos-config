@@ -4,6 +4,7 @@
 
   imports = [
     ../../home-manager/common
+    ../../home-manager/common/xclip.nix
     ../../home-manager/plasma-manager
   ];
 
@@ -61,6 +62,7 @@
       android-studio
       nixfmt-rfc-style
       nil
+      xclip
     ];
 
     sessionVariables.EDITOR = "nvim";
