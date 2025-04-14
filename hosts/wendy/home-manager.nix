@@ -63,6 +63,9 @@
       nixfmt-rfc-style
       nil
       xclip
+      zsh-powerlevel10k
+      thefuck
+      meslo-lgs-nf
     ];
 
     sessionVariables.EDITOR = "nvim";
@@ -80,5 +83,23 @@
     };
 
     stateVersion = "24.05";
+  };
+
+  programs.zsh = {
+    enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "thefuck"
+      ];
+    };
+    initExtra = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      
+      # Source P10K config if it exists
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    '';
   };
 }
