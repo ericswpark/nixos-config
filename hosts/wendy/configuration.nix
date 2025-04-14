@@ -20,6 +20,7 @@
     ../common/direnv.nix
     ../common/crashdump.nix
     ../common/virt-manager.nix
+    ../common/zsh.nix
   ];
 
   # Bootloader.
