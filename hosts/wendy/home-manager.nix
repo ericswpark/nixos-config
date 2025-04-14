@@ -81,13 +81,4 @@
 
     stateVersion = "24.05";
   };
-
-  programs.bash = {
-    enable = true;
-
-    initExtra = ''
-      # include .profile if it exists
-      [[ -f ~/.profile ]] && . ~/.profile
-    '';
-  };
 }
