@@ -95,7 +95,7 @@
         "thefuck"
       ];
     };
-    initExtra = ''
+    initContent = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       
       # Source P10K config if it exists
