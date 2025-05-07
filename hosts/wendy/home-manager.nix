@@ -67,6 +67,7 @@
       zsh-powerlevel10k
       pay-respects
       meslo-lgs-nf
+      libreoffice
     ];
 
     sessionVariables.EDITOR = "nvim";
