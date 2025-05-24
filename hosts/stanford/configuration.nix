@@ -23,6 +23,15 @@
     ../common/zsh.nix
     ];
 
+  # Asus-Linux specific stuff
+  services.supergfxd.enable = true;
+  services = {
+    asusd = {
+      enable = true;
+      enableUserService = true;
+    };
+  };
+
   # Enable fwupd
   services.fwupd.enable = true;
 
