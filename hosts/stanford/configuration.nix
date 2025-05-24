@@ -24,7 +24,12 @@
     ];
 
   # Asus-Linux specific stuff
-  services.supergfxd.enable = true;
+  services.supergfxd = {
+    enable = true;
+    settings = {
+      vfio_enable = "true";
+    };
+  };
   services = {
     asusd = {
       enable = true;
