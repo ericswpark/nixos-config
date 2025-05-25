@@ -67,6 +67,7 @@
       thefuck
       meslo-lgs-nf
       davinci-resolve-studio
+      krita
     ];
 
     sessionVariables.EDITOR = "nvim";
