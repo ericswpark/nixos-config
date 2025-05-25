@@ -34,6 +34,16 @@
     };
   };
 
+  # Nvidia Optimus configuration
+  hardware.nvidia.prime = {
+		offload = {
+			enable = true;
+			enableOffloadCmd = true;
+		};
+		nvidiaBusId = "PCI:1:0:0";
+    amdgpuBusId = "PCI:101:0:0";
+	};
+
   # Enable fwupd
   services.fwupd.enable = true;
 
