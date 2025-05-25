@@ -66,6 +66,7 @@
       zsh-powerlevel10k
       thefuck
       meslo-lgs-nf
+      davinci-resolve-studio
     ];
 
     sessionVariables.EDITOR = "nvim";
