@@ -12,6 +12,7 @@
     ../common/hw/bluetooth.nix
     ../common/hw/amdgpu.nix
     ../common/hw/nvidia.nix
+    ../common/hw/xbox.nix
     ../common/korean
     ../common/tailscale.nix
     ../common/docker.nix
