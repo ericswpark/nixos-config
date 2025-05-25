@@ -68,6 +68,7 @@
       meslo-lgs-nf
       davinci-resolve-studio
       krita
+      bs-manager
     ];
 
     sessionVariables.EDITOR = "nvim";
