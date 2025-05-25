@@ -16,9 +16,7 @@
     modesetting.enable = true;
     powerManagement.enable = true;
     powerManagement.finegrained = true;
-    # Open-source kernel module
-    # Alpha-quality, do not enable (yet)
-    open = false;
+    open = true;
 
     # Nvidia Settings menu
     nvidiaSettings = true;
