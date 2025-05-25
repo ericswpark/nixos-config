@@ -69,6 +69,7 @@
       davinci-resolve-studio
       krita
       bs-manager
+      obs-studio
     ];
 
     sessionVariables.EDITOR = "nvim";
