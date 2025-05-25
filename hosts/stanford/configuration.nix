@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-    ../common/kernel-latest.nix
+    ./kernel-asus.nix
     ../common/hw/bluetooth.nix
     ../common/korean
     ../common/tailscale.nix
