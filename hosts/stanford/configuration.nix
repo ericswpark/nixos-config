@@ -11,6 +11,7 @@
     ./kernel-asus.nix
     ../common/hw/bluetooth.nix
     ../common/hw/amdgpu.nix
+    ../common/hw/nvidia.nix
     ../common/korean
     ../common/tailscale.nix
     ../common/docker.nix
