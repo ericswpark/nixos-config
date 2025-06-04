@@ -25,6 +25,7 @@
     ../common/virt-manager.nix
     ../common/zsh.nix
     ../common/monado.nix
+    ../common/wivrn.nix
     ];
 
   # Asus-Linux specific stuff
