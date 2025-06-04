@@ -65,7 +65,6 @@
       nil
       xclip
       zsh-powerlevel10k
-      thefuck
       meslo-lgs-nf
     ];
 
@@ -93,7 +92,6 @@
       enable = true;
       plugins = [
         "git"
-        "thefuck"
       ];
     };
     initContent = ''
