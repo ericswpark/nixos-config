@@ -1,11 +1,25 @@
 {
   pkgs,
+  config,
+  system,
   ...
 }:
 let 
   g14_patches = fetchGit {
     url = "https://aur.archlinux.org/linux-g14.git/";
     rev = "b0d9b3bb76006960293f7c6978f68b7b8656bd55";
+  };
+
+  # Last kernel version patches support is 6.14.7, pin
+  pinnedNixpkgsSrc = pkgs.fetchFromGitHub {
+    owner = "nixos";
+    repo = "nixpkgs";
+    rev = "2795c506fe8fb7b03c36ccb51f75b6df0ab2553f";
+    sha256 = "sha256-W7lqHp0qZiENCDwUZ5EX/lNhxjMdNapFnbErcbnP11Q=";
+  };
+  pinnedNixpkgs = import pinnedNixpkgsSrc {
+    inherit system;
+    config = config.nixpkgs.config;
   };
 in 
 {
@@ -22,8 +36,7 @@ in
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  # Uses latest linux kernel - pinned to 6.14
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_14;
+  boot.kernelPackages = pinnedNixpkgs.linuxKernel.packages.linux_6_14;
   
   # Asus g14 patches
   boot.kernelPatches = [
