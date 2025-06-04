@@ -64,6 +64,7 @@
       nil
       xclip
       zsh-powerlevel10k
+      pay-respects
       meslo-lgs-nf
       davinci-resolve-studio
       krita
@@ -108,6 +109,8 @@
           unset HISTFILE
           echo "Done! This terminal session will not be recorded into history."
       }
+
+      eval "$(pay-respects zsh --alias)"
     '';
   };
 }
