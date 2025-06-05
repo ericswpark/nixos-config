@@ -70,6 +70,7 @@
       krita
       bs-manager
       obs-studio
+      wlx-overlay-s
     ];
 
     sessionVariables.EDITOR = "nvim";
