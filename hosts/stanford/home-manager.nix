@@ -71,6 +71,7 @@
       bs-manager
       obs-studio
       wlx-overlay-s
+      nix-index
     ];
 
     sessionVariables.EDITOR = "nvim";
