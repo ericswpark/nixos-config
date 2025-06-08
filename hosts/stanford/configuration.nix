@@ -26,6 +26,7 @@
     ../common/zsh.nix
     ../common/monado.nix
     ../common/wivrn.nix
+    ../common/alvr.nix
     ];
 
   # Asus-Linux specific stuff
