@@ -18,7 +18,7 @@
     ../common/gnupg.nix
     ../common/java.nix
     ../common/direnv.nix
-    ../common/crashdump.nix
+    ../common/boot
     ../common/virt-manager.nix
     ../common/zsh.nix
   ];
