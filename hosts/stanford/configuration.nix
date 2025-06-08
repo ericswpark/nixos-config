@@ -24,7 +24,6 @@
     ../common/crashdump.nix
     ../common/virt-manager.nix
     ../common/zsh.nix
-    ../common/monado.nix
     ../common/vr
     ];
 
