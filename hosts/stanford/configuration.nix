@@ -157,6 +157,7 @@
     exfat
     exfatprogs
     via
+    kdePackages.wacomtablet
   ];
 
   # Add udev rules for via
