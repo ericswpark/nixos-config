@@ -14,6 +14,7 @@
     ../common/hw/nvidia.nix
     ../common/hw/xbox.nix
     ../common/hw/trezor.nix
+    ../common/hw/opentabletdriver.nix
     ../common/korean
     ../common/tailscale.nix
     ../common/docker.nix
