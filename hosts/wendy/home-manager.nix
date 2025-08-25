@@ -4,7 +4,6 @@
 
   imports = [
     ../../home-manager/common
-    ../../home-manager/common/rclone-purdue.nix
     ../../home-manager/common/xclip.nix
     ../../home-manager/plasma-manager
   ];

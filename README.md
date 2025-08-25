@@ -56,7 +56,8 @@ If Korean input is _still_ not working, then you may need to force it to run und
 
 ## OneDrive mount
 
-Used for Purdue
+Deprecated; do not use this anymore. Remove the configuration.
+The flake will be removed in the future.
 
 - `rclone config`
 - `n` (new config)
