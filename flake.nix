@@ -55,7 +55,10 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              home-manager.sharedModules = [
+                plasma-manager.homeManagerModules.plasma-manager
+                nix-index-database.homeModules.nix-index  
+              ];
 
               home-manager.users.ericswpark = import ./hosts/wendy/home-manager.nix;
             }
