@@ -49,6 +49,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/wendy/configuration.nix
+            nix-index-database.nixosModules.nix-index
 
             home-manager.nixosModules.home-manager
             {
