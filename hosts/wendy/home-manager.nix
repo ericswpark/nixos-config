@@ -67,6 +67,7 @@
       pay-respects
       meslo-lgs-nf
       libreoffice
+      typst
     ];
 
     sessionVariables.EDITOR = "nvim";
