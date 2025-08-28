@@ -111,4 +111,7 @@
       eval "$(pay-respects zsh --alias)"
     '';
   };
+
+  # Enable for nix-index in pay-respects
+  programs.nix-index.enable = true;
 }
