@@ -12,6 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -28,6 +32,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/stanford/configuration.nix
+            nix-index-database.nixosModules.nix-index
 
             home-manager.nixosModules.home-manager
             {
