@@ -68,7 +68,6 @@
       meslo-lgs-nf
       libreoffice
       typst
-      kdePackages.kamoso
     ];
 
     sessionVariables.EDITOR = "nvim";
