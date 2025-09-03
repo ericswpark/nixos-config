@@ -33,7 +33,6 @@
       element-desktop
       kuro
       moonlight-qt
-      jellyfin-media-player
       anki-bin
       wine
       bottles
