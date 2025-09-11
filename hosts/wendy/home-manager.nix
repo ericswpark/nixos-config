@@ -67,6 +67,7 @@
       meslo-lgs-nf
       libreoffice
       typst
+      man-pages
     ];
 
     sessionVariables.EDITOR = "nvim";
