@@ -68,6 +68,7 @@
       libreoffice
       typst
       man-pages
+      bind.dnsutils
     ];
 
     sessionVariables.EDITOR = "nvim";
