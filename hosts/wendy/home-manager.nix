@@ -81,7 +81,7 @@
       };
 
       ".config/nvim" = {
-        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/nvim";
+        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim/.config/nvim";
       };
 
       ".vimrc" = {
