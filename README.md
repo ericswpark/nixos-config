@@ -4,7 +4,7 @@ Holds my configuration files for my NixOS machines
 
 ## Deprecated
 
-[See here.](https://ericswpark.com/blog/2025/2025-09-19-why-im-moving-away-from-nixos/)
+[See here.](https://ericswpark.com/blog/2025/2025-09-20-why-im-moving-away-from-nixos/)
 
 
 # Installation
